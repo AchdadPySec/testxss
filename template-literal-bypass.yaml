@@ -1,0 +1,7 @@
+swagger: '2.0'
+info:
+  title: API
+  description: |
+    <img src=x onerror="'a'.replace.call`1${/./}${alert}`">
+  version: '1.0'
+paths: {}

